@@ -25,6 +25,9 @@ public class MainFrame extends JFrame {
         JButton productsBtn = new JButton("Products");
         JButton cartBtn = new JButton("Cart");
         JButton checkoutBtn = new JButton("Checkout");
+          checkoutBtn.addActionListener(e -> {
+            new CheckoutFrame().setVisible(true);  // ✅ Open checkout window
+        });
 
         sidebar.add(Box.createVerticalStrut(20));
         sidebar.add(productsBtn);
@@ -60,11 +63,13 @@ public class MainFrame extends JFrame {
             content.add(new CartPanel(), "cart");
             cl.show(content, "cart");
         });
-
+        
+       
         checkoutBtn.addActionListener(e -> {
             content.remove(2);
             content.add(new CheckoutPanel(), "checkout");
             cl.show(content, "checkout");
+            
         });
 
         // Layout all parts

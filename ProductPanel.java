@@ -7,9 +7,9 @@ public class ProductPanel extends JPanel {
         setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
 
         Product[] products = {
-            new Product("MacBook Pro", 1999.99, "/Users/vanshthakral/Desktop/git/Ecommerce Website/App/macbook.png"),
-            new Product("iPhone 14", 899.99, "/Users/vanshthakral/Desktop/git/Ecommerce Website/App/iphone.png"),
-            new Product("AirPods Pro", 249.99, "/Users/vanshthakral/Desktop/git/Ecommerce Website/App/earpods.png")
+            new Product("MacBook Pro", 1999.99, "/Users/vanshthakral/Desktop/git/Ecommerce Website/App/JavaSwing-Project/macbook.png"),
+            new Product("iPhone 14", 899.99, "/Users/vanshthakral/Desktop/git/Ecommerce Website/App/JavaSwing-Project/iphone.png"),
+            new Product("AirPods Pro", 249.99, "/Users/vanshthakral/Desktop/git/Ecommerce Website/App/JavaSwing-Project/earpods.png")
         };
 
         for (Product product : products) {
