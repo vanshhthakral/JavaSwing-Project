@@ -2,14 +2,15 @@ import java.awt.*;
 import javax.swing.*;
 
 public class ProductPanel extends JPanel {
+
     public ProductPanel() {
         setLayout(new GridLayout(0, 1, 10, 10));
         setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
 
         Product[] products = {
-            new Product("MacBook Pro", 1999.99, "/Users/vanshthakral/Desktop/git/Ecommerce Website/App/JavaSwing-Project/macbook.png"),
-            new Product("iPhone 14", 899.99, "/Users/vanshthakral/Desktop/git/Ecommerce Website/App/JavaSwing-Project/iphone.png"),
-            new Product("AirPods Pro", 249.99, "/Users/vanshthakral/Desktop/git/Ecommerce Website/App/JavaSwing-Project/earpods.png")
+            new Product("MacBook Pro", 1999.99, "macbook.png"),
+            new Product("iPhone 14", 899.99, "iphone.png"),
+            new Product("AirPods Pro", 249.99, "earpods.png")
         };
 
         for (Product product : products) {
@@ -47,5 +48,17 @@ public class ProductPanel extends JPanel {
 
             add(productCard);
         }
+    }
+
+    // ✅ Add this method to run ProductPanel directly
+    public static void main(String[] args) {
+        SwingUtilities.invokeLater(() -> {
+            JFrame frame = new JFrame("Product Catalog");
+            frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+            frame.setSize(600, 500);
+            frame.setLocationRelativeTo(null);
+            frame.add(new JScrollPane(new ProductPanel())); // Scrollable panel
+            frame.setVisible(true);
+        });
     }
 }
