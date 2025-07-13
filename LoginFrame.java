@@ -1,5 +1,3 @@
-
-
 import javax.swing.*;
 import java.awt.*;
 import java.sql.*;
@@ -61,6 +59,13 @@ public class LoginFrame extends JFrame {
             } catch (SQLException ex) {
                 JOptionPane.showMessageDialog(this, "Username already exists", "Error", JOptionPane.ERROR_MESSAGE);
             }
+        });
+    }
+
+    // ✅ Add this method to run the frame
+    public static void main(String[] args) {
+        SwingUtilities.invokeLater(() -> {
+            new LoginFrame().setVisible(true);
         });
     }
 }
